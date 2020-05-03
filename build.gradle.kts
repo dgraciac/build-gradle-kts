@@ -100,16 +100,6 @@ allprojects {
 }
 // JACOCO -- END
 
-// SonarQube -- BEGIN
-sonarqube {
-    properties {
-        property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.organization", "kerberos-platform")
-        property("sonar.projectKey", "kerberos-platform_sdk-kotlin")
-    }
-}
-// SonarQube -- END
-
 // TEST LOGGING -- BEGIN
 allprojects {
     tasks.withType<Test> {
