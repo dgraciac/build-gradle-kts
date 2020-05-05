@@ -159,6 +159,7 @@ allprojects {
         "testImplementation"("io.mockk:mockk:1.10.0")
         "testImplementation"("org.assertj:assertj-core:3.15.0")
         "testImplementation"("com.github.tomakehurst:wiremock-jre8:2.26.3")
+        "testImplementation"("org.amshove.kluent:kluent:1.61")
     }
 }
 // Dependencies -- END
