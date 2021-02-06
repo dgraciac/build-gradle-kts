@@ -149,17 +149,17 @@ allprojects {
     }
 
     dependencies {
-        "implementation"(platform(kotlin("bom")))
-        "implementation"(kotlin("stdlib-jdk8"))
-        "implementation"(kotlin("reflect"))
-        "implementation"("javax.inject:javax.inject:1")
+        implementation(platform(kotlin("bom")))
+        implementation(kotlin("stdlib-jdk8"))
+        implementation(kotlin("reflect"))
+        implementation("javax.inject:javax.inject:1")
 
-        "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine:5.7.1")
-        "testImplementation"("org.junit.jupiter:junit-jupiter-api:5.7.1")
-        "testImplementation"("org.junit.jupiter:junit-jupiter-params:5.7.1")
-        "testImplementation"("io.mockk:mockk:1.10.5")
-        "testImplementation"("org.assertj:assertj-core:3.19.0")
-        "testImplementation"("com.github.tomakehurst:wiremock-jre8:2.27.2")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+        testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
+        testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.1")
+        testImplementation("io.mockk:mockk:1.10.5")
+        testImplementation("org.assertj:assertj-core:3.19.0")
+        testImplementation("com.github.tomakehurst:wiremock-jre8:2.27.2")
     }
 }
 // Dependencies -- END
