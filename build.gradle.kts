@@ -2,13 +2,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 // PLUGINS -- BEGIN
 plugins {
-    kotlin("jvm") version "1.3.72"
+    kotlin("jvm") version "1.4.30"
     `java-library`
     jacoco
-    id("org.sonarqube") version "2.8"
+    id("org.sonarqube") version "3.0"
     id("com.jfrog.bintray") version "1.8.5"
     `maven-publish`
-    id("com.diffplug.gradle.spotless") version "3.28.1"
+    id("com.diffplug.spotless") version "5.9.0"
 }
 
 allprojects {
@@ -40,7 +40,7 @@ allprojects {
 
 // SPOTLESS -- BEGIN
 allprojects {
-    apply(plugin = "com.diffplug.gradle.spotless")
+    apply(plugin = "com.diffplug.spotless")
 
     spotless {
         kotlin {
@@ -82,7 +82,7 @@ allprojects {
     apply(plugin = "jacoco")
 
     jacoco {
-        toolVersion = "0.8.5"
+        toolVersion = "0.8.6"
     }
 
     tasks.jacocoTestReport {
@@ -154,12 +154,12 @@ allprojects {
         "implementation"(kotlin("reflect"))
         "implementation"("javax.inject:javax.inject:1")
 
-        "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine:5.6.2")
-        "testImplementation"("org.junit.jupiter:junit-jupiter-api:5.6.2")
-        "testImplementation"("org.junit.jupiter:junit-jupiter-params:5.6.2")
-        "testImplementation"("io.mockk:mockk:1.10.0")
-        "testImplementation"("org.assertj:assertj-core:3.16.0")
-        "testImplementation"("com.github.tomakehurst:wiremock-jre8:2.26.3")
+        "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+        "testImplementation"("org.junit.jupiter:junit-jupiter-api:5.7.1")
+        "testImplementation"("org.junit.jupiter:junit-jupiter-params:5.7.1")
+        "testImplementation"("io.mockk:mockk:1.10.5")
+        "testImplementation"("org.assertj:assertj-core:3.19.0")
+        "testImplementation"("com.github.tomakehurst:wiremock-jre8:2.27.2")
     }
 }
 // Dependencies -- END
